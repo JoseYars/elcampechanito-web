@@ -57,9 +57,6 @@ const App = () => {
         <div className="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
           <div className="flex items-center gap-3 hover:opacity-80 transition cursor-pointer">
             <img src={logoNavbar} alt="El Campechanito Logo" className="h-10 w-auto object-contain" />
-            <span className="font-bold text-lg tracking-tight text-slate-900 hidden sm:block">
-              El Campechanito
-            </span>
           </div>
           
           <div className="hidden md:flex items-center gap-8 font-medium text-sm text-slate-600">
@@ -228,7 +225,6 @@ const App = () => {
           <div>
             <div className="flex items-center justify-center md:justify-start gap-2 mb-4">
                <img src={logoNavbar} alt="Logo" className="h-8 w-auto opacity-80" /> 
-               <span className="font-bold text-slate-700">El Campechanito</span>
             </div>
             <p className="text-slate-500 text-sm max-w-xs">
               Ingeniería en Tecnología de Software y Soporte Técnico Especializado.
