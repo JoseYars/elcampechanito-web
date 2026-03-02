@@ -25,7 +25,7 @@ const App = () => {
   const services = [
     {
       title: "Desarrollo de Software",
-      desc: "Transformamos ideas en realidad: Landing pages veloces (React/Vite), APIs robustas con Flask e integración de IA (Gemini).",
+      desc: "Desarrollamos software a la medida de tus ambiciones. Sitios web de alto rendimiento y soluciones que ponen a tu negocio un paso adelante.",
       icon: <Code2 className="w-10 h-10 text-white" />,
       bg: "bg-blue-600"
     },
