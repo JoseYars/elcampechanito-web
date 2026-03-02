@@ -70,16 +70,16 @@ const App = () => {
         </div>
       </nav>
 
-      {/* --- HERO SECTION DE IMPACTO (FONDO OSCURO) --- */}
-      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 px-6 overflow-hidden bg-slate-900">
+      {/* --- HERO SECTION DE IMPACTO (OPTIMIZADO MÓVIL) --- */}
+      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 px-6 overflow-hidden bg-slate-900">
         
-        {/* Decoración de fondo (Efecto Glow) */}
+        {/* Decoración de fondo */}
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-600 rounded-full blur-[120px] opacity-20 animate-pulse"></div>
         <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-purple-600 rounded-full blur-[100px] opacity-20"></div>
 
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-20 items-center relative z-10">
           
-          {/* LADO IZQUIERDO: TEXTO (Color Blanco para contraste) */}
+          {/* LADO IZQUIERDO: TEXTO */}
           <div className="text-center lg:text-left space-y-8">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-slate-800 border border-slate-700 rounded-full text-xs font-bold tracking-widest uppercase text-blue-400 shadow-lg">
               <span className="w-2 h-2 rounded-full bg-blue-500 animate-ping"></span>
@@ -116,26 +116,22 @@ const App = () => {
             </div>
           </div>
 
-          {/* LADO DERECHO: VISUAL (Ahora visible siempre y mejorado) */}
-          <div className="relative mx-auto w-full max-w-lg lg:max-w-none mt-10 lg:mt-0">
+          {/* LADO DERECHO: VISUAL (Ahora con tarjetas visibles en móvil) */}
+          <div className="relative mx-auto w-full max-w-sm lg:max-w-none mt-12 lg:mt-0 mb-10 lg:mb-0">
             {/* Imagen Principal */}
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-slate-800 transform rotate-1 hover:rotate-0 transition duration-500 group">
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-slate-800 transform rotate-1 hover:rotate-0 transition duration-500 group z-10">
               <img 
                 src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070&auto=format&fit=crop" 
                 alt="Tecnología y Hardware" 
                 className="w-full h-auto object-cover transform group-hover:scale-105 transition duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
-              
-              {/* Etiqueta dentro de la imagen */}
-              <div className="absolute bottom-6 left-6 text-white">
-                <p className="font-bold text-lg">Laboratorio de Ingeniería</p>
-                <p className="text-sm text-slate-300">Reparación y Desarrollo</p>
-              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
+              {/* Texto dentro de la imagen ELIMINADO como pediste */}
             </div>
 
             {/* ELEMENTO FLOTANTE 1: TARJETA DE CÓDIGO */}
-            <div className="absolute -bottom-6 -right-4 lg:-left-10 bg-slate-800/90 backdrop-blur-md text-slate-200 p-5 rounded-2xl shadow-xl border border-slate-600 w-72 animate-bounce-slow">
+            {/* Ajustes móviles: Centrado abajo, un poco más pequeño (scale-95) y z-index alto */}
+            <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 lg:left-auto lg:translate-x-0 lg:-bottom-6 lg:-left-10 bg-slate-800/95 backdrop-blur-md text-slate-200 p-4 lg:p-5 rounded-2xl shadow-2xl border border-slate-600 w-[90%] lg:w-72 animate-bounce-slow z-20">
               <div className="flex items-center gap-2 mb-3 border-b border-slate-600 pb-2">
                 <Terminal size={14} className="text-green-400" />
                 <span className="text-xs font-mono text-slate-400">main.py</span>
@@ -148,13 +144,14 @@ const App = () => {
             </div>
 
             {/* ELEMENTO FLOTANTE 2: TARJETA DE HARDWARE */}
-            <div className="absolute -top-6 -right-2 lg:-right-6 bg-white p-4 rounded-2xl shadow-lg border border-slate-100 flex items-center gap-4 animate-pulse">
-              <div className="bg-indigo-600 p-3 rounded-xl text-white">
-                <Zap size={24} fill="currentColor" />
+            {/* Ajustes móviles: Esquina superior derecha, un poco más pequeña */}
+            <div className="absolute -top-6 -right-2 lg:-top-6 lg:-right-6 bg-white p-3 lg:p-4 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-3 lg:gap-4 animate-pulse z-20 scale-90 lg:scale-100">
+              <div className="bg-indigo-600 p-2 lg:p-3 rounded-xl text-white">
+                <Zap size={20} fill="currentColor" />
               </div>
               <div>
-                <p className="text-xs text-slate-500 font-bold uppercase tracking-wider">Rendimiento</p>
-                <p className="text-lg font-bold text-slate-900">100% Rápido</p>
+                <p className="text-[10px] lg:text-xs text-slate-500 font-bold uppercase tracking-wider">Rendimiento</p>
+                <p className="text-sm lg:text-lg font-bold text-slate-900">100% Rápido</p>
               </div>
             </div>
           </div>
